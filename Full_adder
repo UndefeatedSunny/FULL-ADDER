@@ -1,0 +1,35 @@
+VERILOG FILE OF FULL ADDER (8-BIT)
+
+module full_add(a,b,cin,sum,carry);
+input a,b,cin;
+output sum,carry;
+wire sum,carry;
+
+assign sum=a^b^c; // sum bit
+assign carry=((a&b) | (b&cin) | (a&cin)); //carry bit
+
+endmodule
+
+
+TESTBENCH :-
+
+module full_adder_testbench;
+reg a;
+reg b;
+reg cin;
+wire sum;
+wire carry;
+full_add uut (  .a(a),   .b(b),.cin(cin),.sum(sum),.carry(carry)  );
+initial 
+begin
+#10 a=1'b0; b=1'b0; cin=1'b0;
+#10 a=1'b0; b=1'b0; cin=1'b1; 
+#10 a=1'b0; b=1'b1; cin=1'b0;
+#10 a=1'b0; b=1'b1; cin=1'b1;
+#10 a=1'b1; b=1'b0; cin=1'b0;
+#10 a=1'b1; b=1'b0; cin=1'b1;
+#10 a=1'b1; b=1'b1; cin=1'b0;
+#10 a=1'b1; b=1'b1; cin=1'b1;
+#240 $stop;
+end
+endmodule
