@@ -1,5 +1,4 @@
 # VLSI
-Verilog
 
 FULL ADDER 
 
