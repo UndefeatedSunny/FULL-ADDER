@@ -1,0 +1,7 @@
+# VLSI
+Verilog
+
+FULL ADDER 
+
+SUNNY CHAUDHARY 
+K.I.E.T ,Ghaziabad
